@@ -19,9 +19,9 @@
 ## 下載本專案及安裝專案所需之NPM模組 
  
 ```
- $ git clone git@github.com:AlanJui/mocha-test.git
+ $ git clone git@github.com:AlanJui/sinon.git
 
- $ cd mocha-test
+ $ cd sinon
 
  $ npm install
 ```
