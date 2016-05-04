@@ -1,0 +1,79 @@
+    <section class="suite">
+      <h1>GitHub API</h1>
+      <dl>
+        <section class="suite">
+          <h1>GitHub info</h1>
+          <dl>
+            <dt>returns repo info from github</dt>
+            <dd><pre><code>word.info(function (error, reply) {
+  // if (error) console.error(error);
+  // console.log(reply);
+  expect(reply.language).to.equal('HTML');
+  expect(reply.watchers).to.equal(263)
+  done();
+});</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>Info Language</h1>
+          <dl>
+            <dt>returns language info of the repo</dt>
+            <dd><pre><code>var ghRepo = {
+  'language': 'Assembly'
+};
+var stub = sinon.stub().callsArgWith(0, null, ghRepo);
+word.infoLang(stub, function (reply) {
+  expect(reply).to.equal('Language is Assembly');
+  done();
+});</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>from Homepage</h1>
+      <dl>
+        <dt>returns the title of the page</dt>
+        <dd><pre><code>client.getTitle().then(function (title) {
+  expect(title).to.equal('Browser Testing');
+  done();
+});</code></pre></dd>
+        <dt>returns the header 1 test of the page</dt>
+        <dd><pre><code>client.findElement(webDriver.By.id('header')).getText()
+  .then(function (text) {
+    expect(text).to.equal('Hello!');
+    done();
+  });</code></pre></dd>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>Word processing</h1>
+      <dl>
+        <section class="suite">
+          <h1>Sanitize</h1>
+          <dl>
+            <dt>returns lowercase of a string</dt>
+            <dd><pre><code>var inputWord = 'HELLO WORLD';
+var outputWord = word.sanitize(inputWord);
+expect(outputWord).to.equal('hello world');
+expect(outputWord).to.not.equal('Hello World');
+expect(outputWord).to.be.a('string');
+expect(outputWord).to.not.be.a('number');
+expect(outputWord).to.contain('hello');</code></pre></dd>
+            <dt>remove any hyphen</dt>
+            <dd><pre><code>var inputWord = 'HELLO-WORLD';
+var outputWord = word.sanitize(inputWord);
+expect(outputWord).to.equal('hello world');</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>Tokenize</h1>
+          <dl>
+            <dt>returns an array of words</dt>
+            <dd><pre><code>var sentence = 'hello world';
+var tokenizedSentence = word.tokenize(sentence);
+expect(tokenizedSentence).to.include.members(['hello', 'world']);</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>

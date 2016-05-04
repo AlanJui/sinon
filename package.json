@@ -1,0 +1,33 @@
+{
+  "name": "sinon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/server",
+    "test": "mocha && mocha test --require blanket --reporter html-cov > report/coverage.html",
+    "test:rpt": "mocha --reporter doc > report/out.html",
+    "test:web": "java -jar lib/selenium-server-standalone-2.53.0.jar  ",
+    "serve": "node app/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "blanket": "^1.2.3",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "selenium-webdriver": "^2.53.2",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "index.js"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  }
+}
