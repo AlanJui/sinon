@@ -36,10 +36,10 @@
 請透過 Web 瀏覽器，至此[下載網址](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 下載檔案。
 
- * chromedriver_linux32.zip	2016-01-26 06:47:39	2.64MB	
- * chromedriver_linux64.zip	2016-01-26 15:51:03	2.57MB	
- * chromedriver_mac32.zip	2016-01-26 07:59:08	3.55MB	
- * chromedriver_win32.zip	2016-01-26 06:47:03	2.48MB	
+ * chromedriver_linux32.zip	
+ * chromedriver_linux64.zip	
+ * chromedriver_mac32.zip		
+ * chromedriver_win32.zip	
 
 ### 安裝
 
@@ -49,14 +49,14 @@
  $ sudo mv chromedrvier /usr/local/bin
 ```
 
-`注意`: 環境變數的 PATH ，必須有指定 `/usr/local/bin` ，
-確定 chromedriver 可被作業系統找到。
+注意: 環境變數的 PATH ，必須有指定 `/usr/local/bin` 此路徑內在，
+以便 chromedriver 這個執行檔，可被作業系統找到。
 
 
 # 執行作業
 
 在 test 目錄中的 `browserSpec.js` 測試程式，其執行環境，
-務必要有 Web Server 及 Selenium Server 兩項相互搭配，才能正常執行。
+需有 Web Server 及 Selenium Server 兩項相互搭配，才能正常執行。
 
 ## 啟動 Selenium Server
  
@@ -85,7 +85,7 @@
 
 # 參考資訊
 
-## [Build Podcast 062 Mocha - YouTube 影片](https://www.youtube.com/watch?v=Q8Jl85FJz4E)
+ * [Build Podcast 062 Mocha - YouTube 影片](https://www.youtube.com/watch?v=Q8Jl85FJz4E)
 
-## [Build Podcast 062 Mocha - 網站](https://build-podcast.com/mocha/)
+ * [Build Podcast 062 Mocha - 網站](https://build-podcast.com/mocha/)
 
